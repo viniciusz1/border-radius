@@ -1,0 +1,18 @@
+<div class="content" style="background-color: red; width: 100vw; height: 100vh;">
+  <div class="inputs-top">
+    <input style="margin: 10px;" type="text" #esquerdasup (change)="onChange()">
+
+    <input type="text" #direitasup (change)="onChange()">
+  </div>
+  <div style="background-color: violet; width: 300px; height: 300px;"
+  [ngStyle]="{'border-top-left-radius': esquerdasup.value+'px',
+  'border-top-right-radius': direitasup.value+'px',
+  'border-bottom-left-radius': esquerdainf.value+'px',
+  'border-bottom-right-radius': direitainf.value+'px'}">
+  </div>
+  <div class="inputs-bottom">
+    <input style="margin: 10px;" type="text" #esquerdainf (change)="onChange()">
+    <input type="text" #direitainf (change)="onChange()">
+
+  </div>
+</div>
